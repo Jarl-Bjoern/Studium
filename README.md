@@ -1,8 +1,8 @@
 # Gruppenarbeit HH9
-| Student/In | Matrikelnummer |
-| ---- | ---------- |
-| Julia Schwab-Di Benedetto | 404116 |
-| Rainer Herold | 407302 |
+| Student/In | Matrikelnummer | Standort |
+| ---- | ---------- | ---- |
+| Julia Schwab-Di Benedetto | 404116 | Hamburg |
+| Rainer Herold | 407302 | Hamburg |
 
 # Notice
 This repository was cloned.
