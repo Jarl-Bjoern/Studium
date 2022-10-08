@@ -6,10 +6,10 @@ These are the first steps for a new a project about learning Python with the hel
 The levels will be created by various contributors.
 
 # Gruppenarbeit HH9
-| Name |
-| ---- |
-| Rainer Herold |
-| Julia Schwab-Di Benedetto |
+| Name | Matrikelnr |
+| ---- | ---------- |
+| Julia Schwab-Di Benedetto | 404116 |
+| Rainer Herold | 407302 |
 
 # How to run
 
