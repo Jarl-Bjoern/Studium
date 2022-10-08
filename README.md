@@ -5,6 +5,12 @@ Author: Markus M. Berg
 These are the first steps for a new a project about learning Python with the help of some programming challenges.
 The levels will be created by various contributors.
 
+# Gruppenarbeit HH9
+| Name |
+| ---- |
+| Rainer Herold |
+| Julia Schwab-Di Benedetto |
+
 # How to run
 
 Just start ``EscapeRoomWeb.py`` or use the batch file start.bat (on Windows). This will start a web server on http://localhost:5000. Please open this URL in your web browser to start the game.
