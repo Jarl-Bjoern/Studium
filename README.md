@@ -1,15 +1,18 @@
+# Gruppenarbeit HH9
+| Student/In | Matrikelnummer |
+| ---- | ---------- |
+| Julia Schwab-Di Benedetto | 404116 |
+| Rainer Herold | 407302 |
+
+# Notice
+This repository was cloned.
+
 # Python Escape Room Game
 
 Author: Markus M. Berg
 
 These are the first steps for a new a project about learning Python with the help of some programming challenges.
 The levels will be created by various contributors.
-
-# Gruppenarbeit HH9
-| Name | Matrikelnr |
-| ---- | ---------- |
-| Julia Schwab-Di Benedetto | 404116 |
-| Rainer Herold | 407302 |
 
 # How to run
 
