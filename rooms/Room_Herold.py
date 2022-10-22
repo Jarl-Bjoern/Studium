@@ -1,7 +1,7 @@
 from EscapeRoom import EscapeRoom
 from os import walk
 from os.path import join
-from random import choice
+from random import choice, randint
 from requests import get, post
 from string import ascii_uppercase
 
@@ -69,8 +69,12 @@ class MyRoom(EscapeRoom):
         return word
     
     # Level 3
-    def 
-    
+    def Sort_Chars_In_Text(self):
+        Text, Word = "H134E23589L34563L23333222244L23335555112334O", ""
+        for Text_Char in Text:
+            if (Text_Char.isupper()): Word += Text_Char
+        for View in range(0, len(Word)): print (f{View+1} - {Word[View]})
+
     def get_number_from_letters(self, letters):
         numberstring = ""
         for c in letters:
