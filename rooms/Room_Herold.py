@@ -50,6 +50,13 @@ class MyRoom(EscapeRoom):
         return letters
 
     ### SOLUTIONS ###
+    # Level 1
+    def RCE(self):
+        URL = "http://localhost:8000/index.html"
+        r = get(f'{URL}?cmd=ls')
+        return r
+    
+    # Level 2
     def List_Files_Build_Pass(self):
         word = ""
         for root, _, files in walk('./Level_2', topdown=False):
@@ -60,6 +67,9 @@ class MyRoom(EscapeRoom):
                             if (line_char.isupper()): word += line_char
                             elif (line_char.islower()): word += line_char
         return word
+    
+    # Level 3
+    def 
     
     def get_number_from_letters(self, letters):
         numberstring = ""
