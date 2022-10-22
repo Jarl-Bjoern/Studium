@@ -1,6 +1,9 @@
-import random
-import string
 from EscapeRoom import EscapeRoom
+from os import walk
+from os.path import join
+from random import choice
+from requests import get, post
+from string import ascii_uppercase
 
 class MyRoom(EscapeRoom):
     def __init__(self):
@@ -43,10 +46,21 @@ class MyRoom(EscapeRoom):
     def random_letters(self):
         letters = ""
         for _ in range(3):
-            letters = letters + random.choice(string.ascii_uppercase)
+            letters = letters + choice(ascii_uppercase)
         return letters
 
     ### SOLUTIONS ###
+    def List_Files_Build_Pass(self):
+        word = ""
+        for root, _, files in walk('./Level_2', topdown=False):
+            for file in files:
+                with open(join(root, file), 'r') as f:
+                    for line in f.read().splitlines():
+                        for line_char in line:
+                            if (line_char.isupper()): word += line_char
+                            elif (line_char.islower()): word += line_char
+        return word
+    
     def get_number_from_letters(self, letters):
         numberstring = ""
         for c in letters:
