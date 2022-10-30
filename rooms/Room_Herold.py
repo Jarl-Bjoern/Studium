@@ -88,3 +88,9 @@ class MyRoom(EscapeRoom):
             if not c in vowels:
                 result = result + c
         return result
+    
+    # Level 4
+    
+    # Level 5
+    
+    # Level 6
