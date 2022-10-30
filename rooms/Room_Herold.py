@@ -5,7 +5,7 @@ from random import choice, randint
 from requests import get, post
 from string import ascii_uppercase
 
-class MyRoom(EscapeRoom):
+class Room_Herold_Schwab(EscapeRoom):
     def __init__(self):
         super().__init__()
         self.set_metadata("Rainer Herold", __name__)
