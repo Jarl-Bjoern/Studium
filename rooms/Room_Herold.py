@@ -22,7 +22,7 @@ class Room_Herold_Schwab(EscapeRoom):
             "http://localhost:8000/index.html"
             f"Schreibe eine Methode <code>run('{mysterious_letters}')</code>, die aus den Buchstaben den richtigen Code erzeugt."]
         hints = ["Es gibt verschiedene Module um Webrequests zu nutzen.",
-            "Ueberlege dir einen Systembefehl aus Linux und versuche ihn sinnvoll in die URL einzubauen."]
+            "Überlege dir einen Systembefehl aus Linux und versuche ihn sinnvoll in die URL einzubauen."]
         
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.RCE, "data": mysterious_letters}
 
