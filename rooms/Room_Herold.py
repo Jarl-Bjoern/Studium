@@ -24,7 +24,7 @@ class MyRoom(EscapeRoom):
         hints = ["Es gibt verschiedene Module um Webrequests zu nutzen.",
             "Ueberlege dir einen Systembefehl aus Linux und versuche ihn sinnvoll in die URL einzubauen."]
         
-        return {"task_messages": task_messages, "hints": hints, "solution_function": self.get_number_from_letters, "data": mysterious_letters}
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.RCE, "data": mysterious_letters}
 
     def create_level2(self):
         task_messages = ["Nach der korrekten Eingabe des Codes wird nun geheimnisvolle Musik abgespielt und eine Stimme sagt mehrfach: 'Vokale verboten'"]
@@ -34,14 +34,14 @@ class MyRoom(EscapeRoom):
     def create_level3(self):
         mysterious_letters = self.random_letters()
 
-        task_messages = ["Du hast den ersten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
+        task_messages = ["Du hast den zweiten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
             "Auf dem Display steht, dass du nun 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
             "Hinter einem an der Wand aufgehängten Bild siehst du nun ein Eingabepanel für einen 6-ziffrigen Code.",
             f"Schreibe eine Methode <code>run('{mysterious_letters}')</code>, die aus den Buchstaben den richtigen Code erzeugt."]
         hints = ["Es gibt ein bestimmtes Modul in Python, mit dem man auf Betriebssystemebene arbeiten kann.",
             "Versuche die englische Variante des Wortes Betriebssystem."]
         
-        return {"task_messages": task_messages, "hints": hints, "solution_function": self.get_number_from_letters, "data": mysterious_letters}
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.List_Files_Build_Pass, "data": mysterious_letters}
 
     def random_letters(self):
         letters = ""
