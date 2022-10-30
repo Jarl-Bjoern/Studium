@@ -25,23 +25,23 @@ class MyRoom(EscapeRoom):
             "Ueberlege dir einen Systembefehl aus Linux und versuche ihn sinnvoll in die URL einzubauen."]
         
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.get_number_from_letters, "data": mysterious_letters}
-    
+
     def create_level2(self):
+        task_messages = ["Nach der korrekten Eingabe des Codes wird nun geheimnisvolle Musik abgespielt und eine Stimme sagt mehrfach: 'Vokale verboten'"]
+        hints = ["Wie lautet der Spruch 'Vokale verboten' wenn Vokale verboten sind?"]
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.remove_vowels, "data": "Vokale verboten"}
+
+    def create_level3(self):
         mysterious_letters = self.random_letters()
 
-        task_messages = ["Du wachst in einem Raum auf und siehst einen Laptop. Du setzt dich auf den Stuhl und schaust auf den Display."
-            "Auf dem Display steht, dass du 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
+        task_messages = ["Du hast den ersten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
+            "Auf dem Display steht, dass du nun 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
             "Hinter einem an der Wand aufgehängten Bild siehst du nun ein Eingabepanel für einen 6-ziffrigen Code.",
             f"Schreibe eine Methode <code>run('{mysterious_letters}')</code>, die aus den Buchstaben den richtigen Code erzeugt."]
         hints = ["Es gibt ein bestimmtes Modul in Python, mit dem man auf Betriebssystemebene arbeiten kann.",
             "Versuche die englische Variante des Wortes Betriebssystem."]
         
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.get_number_from_letters, "data": mysterious_letters}
-
-    def create_level3(self):
-        task_messages = ["Nach der korrekten Eingabe des Codes wird nun geheimnisvolle Musik abgespielt und eine Stimme sagt mehrfach: 'Vokale verboten'"]
-        hints = ["Wie lautet der Spruch 'Vokale verboten' wenn Vokale verboten sind?"]
-        return {"task_messages": task_messages, "hints": hints, "solution_function": self.remove_vowels, "data": "Vokale verboten"}
 
     def random_letters(self):
         letters = ""
@@ -57,6 +57,13 @@ class MyRoom(EscapeRoom):
         return r
     
     # Level 2
+    def Sort_Chars_In_Text(self):
+        Text, Word = "H134E23589L34563L23333222244L23335555112334O", ""
+        for Text_Char in Text:
+            if (Text_Char.isupper()): Word += Text_Char
+        for View in range(0, len(Word)): print (f{View+1} - {Word[View]})
+
+    # Level 3
     def List_Files_Build_Pass(self):
         word = ""
         for root, _, files in walk('./Level_2', topdown=False):
@@ -67,13 +74,6 @@ class MyRoom(EscapeRoom):
                             if (line_char.isupper()): word += line_char
                             elif (line_char.islower()): word += line_char
         return word
-    
-    # Level 3
-    def Sort_Chars_In_Text(self):
-        Text, Word = "H134E23589L34563L23333222244L23335555112334O", ""
-        for Text_Char in Text:
-            if (Text_Char.isupper()): Word += Text_Char
-        for View in range(0, len(Word)): print (f{View+1} - {Word[View]})
 
     def get_number_from_letters(self, letters):
         numberstring = ""
