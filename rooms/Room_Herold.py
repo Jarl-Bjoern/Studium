@@ -23,7 +23,7 @@ class Room_Herold_Schwab(EscapeRoom):
             f"Schreibe eine Methode <code>run('{mysterious_letters}')</code>, die aus den Buchstaben den richtigen Code erzeugt."]
         hints = ["Es gibt verschiedene Module um Webrequests zu nutzen.",
             "Überlege dir einen Systembefehl aus Linux und versuche ihn sinnvoll in die URL einzubauen."]
-        
+
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.RCE, "data": mysterious_letters}
 
     def create_level2(self):
@@ -43,7 +43,7 @@ class Room_Herold_Schwab(EscapeRoom):
             f"Schreibe eine Methode <code>run('{mysterious_letters}')</code>, die aus den Buchstaben den richtigen Code erzeugt."]
         hints = ["Es gibt ein bestimmtes Modul in Python, mit dem man auf Betriebssystemebene arbeiten kann.",
             "Versuche die englische Variante des Wortes Betriebssystem."]
-        
+
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.List_Files_Build_Pass, "data": mysterious_letters}
 
     def random_letters(self):
@@ -58,7 +58,7 @@ class Room_Herold_Schwab(EscapeRoom):
         URL = "http://localhost:8000/index.html"
         r = get(f'{URL}?cmd=ls')
         return r
-    
+
     # Level 2
     def Sort_Chars_In_Text(self):
         Text, Word = "H134E23589L34563L23333222244L23335555112334O", ""
@@ -91,9 +91,9 @@ class Room_Herold_Schwab(EscapeRoom):
             if not c in vowels:
                 result = result + c
         return result
-    
+
     # Level 4
-    
+
     # Level 5
-    
+
     # Level 6
