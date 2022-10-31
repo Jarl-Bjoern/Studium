@@ -54,7 +54,7 @@ class Room_Herold_Schwab(EscapeRoom):
     # Level 1
     def RCE(self):
         from requests import get
-        
+
         URL = "http://localhost:8000/index.html"
         r = get(f'{URL}?cmd=ls')
         return r
@@ -62,15 +62,19 @@ class Room_Herold_Schwab(EscapeRoom):
     # Level 2
     def Sort_Chars_In_Text(self):
         Text, Word = "H134E23589L34563L23333222244L23335555112334O", ""
+        Temp_Array = []
+
         for Text_Char in Text:
             if (Text_Char.isupper()): Word += Text_Char
-        for View in range(0, len(Word)): print (f'{View+1} - {Word[View]}')
+        for View in range(0, len(Word)): Temp_Array.append(f'{View+1} - {Word[View]}')
+            
+        return Temp_Array
 
     # Level 3
     def List_Files_Build_Pass(self):
         from os import walk
         from os.path import join
-        
+
         word = ""
         for root, _, files in walk('./Level_2', topdown=False):
             for file in files:
