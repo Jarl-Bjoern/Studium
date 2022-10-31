@@ -1,8 +1,5 @@
 from EscapeRoom import EscapeRoom
-from os import walk
-from os.path import join
 from random import choice, randint
-from requests import get, post
 from string import ascii_uppercase
 
 class Room_Herold_Schwab(EscapeRoom):
@@ -53,6 +50,8 @@ class Room_Herold_Schwab(EscapeRoom):
     ### SOLUTIONS ###
     # Level 1
     def RCE(self):
+        from requests import get
+        
         URL = "http://localhost:8000/index.html"
         r = get(f'{URL}?cmd=ls')
         return r
@@ -66,6 +65,9 @@ class Room_Herold_Schwab(EscapeRoom):
 
     # Level 3
     def List_Files_Build_Pass(self):
+        from os import walk
+        from os.path import join
+        
         word = ""
         for root, _, files in walk('./Level_2', topdown=False):
             for file in files:
