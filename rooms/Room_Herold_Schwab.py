@@ -16,7 +16,7 @@ class Room_Herold_Schwab(EscapeRoom):
     ### LEVELS ###
     def create_level1(self):
         URL = "http://localhost:5000/index.html"
-        
+
         task_messages = ["Du wachst in einem Raum auf und siehst einen Laptop. Du setzt dich auf den Stuhl und schaust auf den Display.",
             "Auf dem Display steht, dass du 5 Minuten Zeit hast, in der vorgegebenen URL eine moegliche Remote Code Execution anzuhaengen",
             f"{URL}",
@@ -28,7 +28,7 @@ class Room_Herold_Schwab(EscapeRoom):
 
     def create_level2(self):
         Text = "H134E23589L34563L23333222244L23335555112334O"
-        
+
         task_messages = ["Nach der korrekten Eingabe des Codes hoerst du einen alarmieren Ton, auf dem Display erscheint eine neue Nachricht.",
                         "Du hast maximal 5 Minuten Zeit, einen Sortieralgorithmus zu folgendem String über eine Methode run(Text) zu generieren!",
                         f"String: {Text}",
@@ -40,7 +40,7 @@ class Room_Herold_Schwab(EscapeRoom):
 
     def create_level3(self):
         Directory = "rooms/Level_2"
-        
+
         task_messages = ["Du hast den zweiten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
             "Auf dem Display steht, dass du nun 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
             "Hinter einem an der Wand aufgehängten Bild siehst du nun ein Eingabepanel für einen 6-ziffrigen Code.",
