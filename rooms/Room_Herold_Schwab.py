@@ -64,7 +64,7 @@ class Room_Herold_Schwab(EscapeRoom):
         Text, Word = "H134E23589L34563L23333222244L23335555112334O", ""
         for Text_Char in Text:
             if (Text_Char.isupper()): Word += Text_Char
-        for View in range(0, len(Word)): print (f{View+1} - {Word[View]})
+        for View in range(0, len(Word)): print (f'{View+1} - {Word[View]}')
 
     # Level 3
     def List_Files_Build_Pass(self):
