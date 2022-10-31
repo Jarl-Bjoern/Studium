@@ -29,7 +29,9 @@ class Room_Herold_Schwab(EscapeRoom):
     def create_level2(self):
         task_messages = ["Nach der korrekten Eingabe des Codes hoerst du einen alarmieren Ton, auf dem Display erscheint eine neue Nachricht.",
                         "Du hast maximal 5 Minuten Zeit, einen Sortier Algorithmus zu folgendem String zu generieren!"
-                        "H134E23589L34563L23333222244L23335555112334O"]
+                        "H134E23589L34563L23333222244L23335555112334O"
+                        "Gebe danach den sortierten String nach folgendem Beispiel aus."
+                        "1. A","2. B", "3. C"]
         hints = ["Wie kann am effizientesten ein Sortieralgorithmus generiert werden?", 
                 "Probiere es mit einer Hilfsvariable"]
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.remove_vowels, "data": "Vokale verboten"}
