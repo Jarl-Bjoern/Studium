@@ -60,7 +60,7 @@ class Room_Herold_Schwab(EscapeRoom):
     # Level 1
     def RCE(self, URL):
         from requests import get
-        from requests.exceptions import *
+        from requests.exceptions import ConnectionError
 
         try: r = get(f'{URL}?cmd=ls')
         except ConnectionError: r = "OK"
