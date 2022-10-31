@@ -29,7 +29,7 @@ class Room_Herold_Schwab(EscapeRoom):
                         "Du hast maximal 5 Minuten Zeit, einen Sortieralgorithmus zu folgendem String über eine Methode run() zu generieren!",
                         "String: H134E23589L34563L23333222244L23335555112334O",
                         "Gebe im Anschluss den sortierten String nach folgendem Beispiel aus.",
-                        "1. A","2. B", "3. C"]
+                        "1 - A","2 - B", "3 - C"]
         hints = ["Wie kann am effizientesten ein Sortieralgorithmus generiert werden?", 
                 "Probiere es mit einer Hilfsvariable"]
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Sort_Chars_In_Text}
