@@ -9,6 +9,9 @@ class Room_Herold_Schwab(EscapeRoom):
         self.add_level(self.create_level1())
         self.add_level(self.create_level2())
         self.add_level(self.create_level3())
+#        self.add_level(self.create_level4())
+#        self.add_level(self.create_level5())
+#        self.add_level(self.create_level6())
 
     ### LEVELS ###
     def create_level1(self):
