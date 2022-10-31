@@ -74,7 +74,7 @@ class Room_Herold_Schwab(EscapeRoom):
         for View in range(0, len(Word)):
             if (f'{View+1} - {Word[View]}' not in Temp_Array):
                 Temp_Array.append(f'{View+1} - {Word[View]}')
-            
+
         return Temp_Array
 
     # Level 3
