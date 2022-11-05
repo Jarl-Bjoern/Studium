@@ -1,7 +1,6 @@
 from EscapeRoom import EscapeRoom
 from os.path import dirname, join, realpath
 from random import choice, randint
-from string import ascii_uppercase
 
 class Room_Herold_Schwab(EscapeRoom):
     def __init__(self):
@@ -39,6 +38,7 @@ class Room_Herold_Schwab(EscapeRoom):
                         "1 - A","2 - B", "3 - C"]
         hints = ["Wie kann am effizientesten ein Sortieralgorithmus generiert werden?", 
                 "Probiere es mit einer Hilfsvariable"]
+        
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Sort_Chars_In_Text, "data": Text}
 
     def create_level3(self):
@@ -53,12 +53,6 @@ class Room_Herold_Schwab(EscapeRoom):
             "Versuche die englische Variante des Wortes Betriebssystem."]
 
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.List_Files_Build_Pass, "data": Directory}
-
-    def random_letters(self):
-        letters = ""
-        for _ in range(3):
-            letters = letters + choice(ascii_uppercase)
-        return letters
 
     ### SOLUTIONS ###
     # Level 1
