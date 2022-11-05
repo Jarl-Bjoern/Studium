@@ -46,7 +46,7 @@ class Room_Herold_Schwab(EscapeRoom):
 
         task_messages = ["Du hast den zweiten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
             "Auf dem Display steht, dass du nun 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
-            "Hinter einem an der Wand aufgehängten Bild siehst du nun ein Eingabepanel für einen 6-ziffrigen Code.",
+            "Hinter einem an der Wand aufgehängten Bild siehst du nun ein Eingabepanel für einen 8-stelligen Code.",
             "Schreibe eine Methode <code>run(Directory)</code>, die alle Dateien überprüft und anschließend ein Passwort formt.",]
         hints = ["Es gibt ein bestimmtes Modul in Python, mit dem man auf Betriebssystemebene arbeiten kann.",
             "Versuche die englische Variante des Wortes Betriebssystem."]
