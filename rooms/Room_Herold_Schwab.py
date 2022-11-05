@@ -18,7 +18,8 @@ class Room_Herold_Schwab(EscapeRoom):
     def create_level1(self):
         URL = "http://localhost:5000/index.html"
 
-        task_messages = ["Du wachst in einem Raum auf und siehst einen Laptop. Du setzt dich auf den Stuhl und schaust auf den Display.",
+        task_messages = ["Du wachst in einem Raum auf und siehst einen Laptop, welcher einen Akkustand von 45% hat."
+            "Du setzt dich auf den Stuhl und schaust auf den Display.",
             "Auf dem Display steht, dass du 5 Minuten Zeit hast, aus der vorgegebenen URL den HTTP-Header 'server' herauszufiltern",
             f"{URL}",
             "Schreibe eine Methode <code>run(URL)</code>, um den Header zu ermitteln."]
