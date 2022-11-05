@@ -58,9 +58,7 @@ class Room_Herold_Schwab(EscapeRoom):
     # Level 1
     def Header_Request(self, URL):
         from requests import get
-
         r = get(f'{URL}')
-
         return r.headers['server']
 
     # Level 2
