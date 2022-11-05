@@ -1,4 +1,5 @@
 from EscapeRoom import EscapeRoom
+from os.path import dirname, join, realpath
 from random import choice, randint
 from string import ascii_uppercase
 
@@ -39,7 +40,8 @@ class Room_Herold_Schwab(EscapeRoom):
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Sort_Chars_In_Text, "data": Text}
 
     def create_level3(self):
-        Directory = "rooms/Level_2"
+        Work_Path, Script_Path = "rooms/Level_2", dirname(realpath(__file__))
+        Directory = join(Script_Path, Work_Path)
 
         task_messages = ["Du hast den zweiten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
             "Auf dem Display steht, dass du nun 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
