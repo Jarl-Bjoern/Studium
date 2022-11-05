@@ -34,7 +34,7 @@ class Room_Herold_Schwab(EscapeRoom):
         task_messages = ["Nach der korrekten Eingabe des Codes hoerst du einen alarmieren Ton, auf dem Display erscheint eine neue Nachricht.",
                         "Du hast maximal 5 Minuten Zeit, einen Sortieralgorithmus zu folgendem String über eine Methode run(Text) zu generieren!",
                         f"String: {Text}",
-                        "Gebe im Anschluss den sortierten String nach folgendem Beispiel aus.",
+                        "Sortiere alle Großbuchstaben heraus und bilde daraus ein neues Array nach folgendem Schema",
                         "1 - A","2 - B", "3 - C"]
         hints = ["Wie kann am effizientesten ein Sortieralgorithmus generiert werden?", 
                 "Probiere es mit einer Hilfsvariable"]
