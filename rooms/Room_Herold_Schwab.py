@@ -19,13 +19,14 @@ class Room_Herold_Schwab(EscapeRoom):
         URL = "http://localhost:5000/index.html"
 
         task_messages = ["Du wachst in einem Raum auf und siehst einen Laptop. Du setzt dich auf den Stuhl und schaust auf den Display.",
-            "Auf dem Display steht, dass du 5 Minuten Zeit hast, in der vorgegebenen URL eine moegliche Remote Code Execution anzuhaengen",
+            "Auf dem Display steht, dass du 5 Minuten Zeit hast, aus der vorgegebenen URL den HTTP-Header 'server' herauszufiltern",
             f"{URL}",
-            "Schreibe eine Methode <code>run(URL)</code>, die aus den Buchstaben den richtigen Code erzeugt."]
+            "Schreibe eine Methode <code>run(URL)</code>, um den Header zu ermitteln."]
         hints = ["Es gibt verschiedene Module um Webrequests zu nutzen.",
-            "Überlege dir einen Systembefehl aus Linux und versuche ihn sinnvoll in die URL einzubauen."]
+                 "Verwende pip oder pip3 install requests, sofern das Package noch fehlt.",
+                 "Nutze Google, um nach einer Anleitung zu suchen."]
 
-        return {"task_messages": task_messages, "hints": hints, "solution_function": self.RCE, "data": URL}
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.Header_Request, "data": URL}
 
     def create_level2(self):
         Text = "H134E23589L34563L23333222244L23335555112334O"
@@ -60,14 +61,12 @@ class Room_Herold_Schwab(EscapeRoom):
 
     ### SOLUTIONS ###
     # Level 1
-    def RCE(self, URL):
+    def Header_Request(self, URL):
         from requests import get
-        from requests.exceptions import ConnectionError
 
-        try: r = get(f'{URL}?cmd=ls')
-        except ConnectionError: r = "OK"
+        r = get(f'{URL}')
 
-        return r
+        return r.headers['server']
 
     # Level 2
     def Sort_Chars_In_Text(self, Text):
