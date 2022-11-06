@@ -34,8 +34,8 @@ class Room_Herold(EscapeRoom):
                         f"String: {Text}",
                         "Sortiere alle Großbuchstaben heraus und bilde daraus ein neues Array nach folgendem Schema",
                         "1 - A","2 - B","3 - C"]
-        hints = ["Wie kann am effizientesten ein Sortieralgorithmus generiert werden?", 
-                "Probiere es mit einer Hilfsvariable."]
+        hints = ["Probiere es mit einer Hilfsvariable.",
+                "Versuche eine Schleife mit der Länge des Wortes zu generieren."]
         
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Sort_Chars_In_Text, "data": Text}
 
@@ -47,8 +47,9 @@ class Room_Herold(EscapeRoom):
             "Auf dem Display steht, dass du nun 10 Minuten Zeit hast, ein Passwort anhand der vorliegenden Dateien zu generieren",
             "Hinter einem an der Wand aufgehängten Bild siehst du nun ein Eingabepanel für einen 8-stelligen Code.",
             "Schreibe eine Methode <code>run(Directory)</code>, die alle Dateien überprüft und anschließend ein Passwort formt."]
-        hints = ["Es gibt ein bestimmtes Modul in Python, mit dem man auf Betriebssystemebene arbeiten kann.",
-            "Versuche die englische Variante des Wortes Betriebssystem."]
+        hints = ["Das Passwort besteht nur aus Groß- und Kleinbuchstaben.",
+            "Probiere es mit dem Modul os.",
+            "Schaue dir die Funktion join an."]
 
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.List_Files_Build_Pass, "data": Directory}
 
