@@ -89,8 +89,13 @@ class Room_Herold_Schwab(EscapeRoom):
                             elif (line_char.islower()): Word += line_char
         return Word
 
-    # Level 4
-
     # Level 5
+    def Log_File_Search(Path):
+        with open(Path, 'r') as f:
+                for line in f.read().splitlines():
+                    Datum = rsplit(r':|\s', line)
 
-    # Level 6
+                    if (Datum[3][1:].split('/')[1] == 'Mar' and Datum[3][1:].split('/')[0] == '07' and 'POST' in Datum[8]):
+                         Ausgabe = f'{Datum[0]} {Datum[3][1:]} {Datum[4]}:{Datum[5]}:{Datum[6]} {Datum[7][1:3]}:{Datum[7][3:-1]} {Datum[8]} {Datum[9]} {Datum[10]}'
+
+        return Ausgabe
