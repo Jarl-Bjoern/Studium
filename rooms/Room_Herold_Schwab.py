@@ -37,7 +37,7 @@ class Room_Herold_Schwab(EscapeRoom):
                         "Sortiere alle Großbuchstaben heraus und bilde daraus ein neues Array nach folgendem Schema",
                         "1 - A","2 - B","3 - C"]
         hints = ["Wie kann am effizientesten ein Sortieralgorithmus generiert werden?", 
-                "Probiere es mit einer Hilfsvariable"]
+                "Probiere es mit einer Hilfsvariable."]
         
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Sort_Chars_In_Text, "data": Text}
 
