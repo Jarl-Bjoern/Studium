@@ -1,6 +1,5 @@
 from EscapeRoom import EscapeRoom
 from os.path import dirname, join, realpath
-from random import randint
 
 class Room_Herold_Schwab(EscapeRoom):
     def __init__(self):
