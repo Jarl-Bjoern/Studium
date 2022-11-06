@@ -1,5 +1,7 @@
 from EscapeRoom import EscapeRoom
+from os import walk
 from os.path import dirname, join, realpath
+from requests import get
 
 class Room_Herold_Schwab(EscapeRoom):
     def __init__(self):
@@ -53,7 +55,6 @@ class Room_Herold_Schwab(EscapeRoom):
     ### SOLUTIONS ###
     # Level 1
     def Header_Request(self, URL):
-        from requests import get
         r = get(f'{URL}')
         return r.headers['server']
 
@@ -72,9 +73,6 @@ class Room_Herold_Schwab(EscapeRoom):
 
     # Level 3
     def List_Files_Build_Pass(self, Directory):
-        from os import walk
-        from os.path import join
-
         Word = ""
         for root, _, files in walk(Directory, topdown=False):
             for file in files:
