@@ -22,7 +22,7 @@ class Room_Herold_Schwab(EscapeRoom):
             "Auf dem Display steht, dass du 5 Minuten Zeit hast, aus der vorgegebenen URL den HTTP-Header 'server' herauszufiltern",
             f"{URL}",
             "Schreibe eine Methode <code>run(URL)</code>, um den Header zu ermitteln."]
-        hints = ["Es gibt verschiedene Module um Webrequests zu nutzen.",
+        hints = ["Es gibt verschiedene Module, um Webrequests zu prüfen.",
                  "Verwende pip oder pip3 install requests, sofern das Package noch fehlt.",
                  "Nutze Google, um nach einer Anleitung zu suchen."]
 
