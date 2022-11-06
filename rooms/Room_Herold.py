@@ -3,7 +3,7 @@ from os import walk
 from os.path import dirname, join, realpath
 from requests import get
 
-class Room_Herold_Schwab(EscapeRoom):
+class Room_Herold(EscapeRoom):
     def __init__(self):
         super().__init__()
         self.set_metadata("Rainer Herold", __name__)
