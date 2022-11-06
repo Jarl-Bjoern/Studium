@@ -42,7 +42,7 @@ class Room_Herold_Schwab(EscapeRoom):
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Sort_Chars_In_Text, "data": Text}
 
     def create_level3(self):
-        Work_Path, Script_Path = "rooms/Level_2", dirname(realpath(__file__))
+        Work_Path, Script_Path = "rooms/Level_3", dirname(realpath(__file__))
         Directory = join(Script_Path, Work_Path)
 
         task_messages = ["Du hast den zweiten Teil bestanden. Nun bemerkst du, dass auf dem Display ein neuer Dialog erscheint."
