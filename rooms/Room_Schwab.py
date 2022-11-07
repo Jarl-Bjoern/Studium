@@ -11,28 +11,76 @@ class Room_Schwab(EscapeRoom):
         self.add_level(self.create_level5())
 
     ### LEVELS ###
-    def create_level1(self):
-        URL = "http://localhost:5000/index.html"
+    def create_level4(self):
 
-        task_messages = ["Du wachst in einem Raum auf und siehst einen Laptop, welcher einen Akkustand von 45% hat."
-            "Du setzt dich auf den Stuhl und schaust auf den Display.",
-            "Auf dem Display steht, dass du 5 Minuten Zeit hast, aus der vorgegebenen URL den HTTP-Header 'server' herauszufiltern",
-            f"{URL}",
-            "Schreibe eine Methode <code>run(URL)</code>, um den Header zu ermitteln."]
-        hints = ["Es gibt verschiedene Module, um Webrequests zu prüfen.",
-                 "Verwende pip oder pip3 install requests, sofern das Package noch fehlt.",
-                 "Nutze Google, um nach einer Anleitung zu suchen."]
+        task_messages = ["Der erste Raum wurde erfolgreich durchlaufen, aber die Challenge ist noch nicht vorbei. Folgendes erscheint auf dem Display:",
+                        "Nicht schlecht! Aber das geht noch besser!",
+                        "Um sicherzustellen, dass dein Aufnahmetest nicht hier endet, generiere ein Passwort mit 8 Zeichen, das Kleinbuchstaben, Großbuchstaben, Zahlen und Sonderzeichen enthält.",
+                        "Validiere dein Ergebnis!"]
+                        
+        hints = ["Versuche die PW-Generierung und PW-Validierung in 2 Methoden aufzuteilen.",
+                 "Du musst nicht unbedingt alle benötigten Zeichen einzeln aufschreiben.",
+                 "Informiere dich was random bewirkt."]
 
-        return {"task_messages": task_messages, "hints": hints, "solution_function": self.Header_Request, "data": URL}
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.Passwort}
+    
+    
+    def create_level5(self):
+        Work_Path, Script_Path = "rooms/Level_5", dirname(realpath(__file__))
+        Directory = join(Script_Path, Work_Path)
+
+        task_messages = ["Nur noch ein Rätsel trennt dich von der Aufnahme in die Hackergruppe. Es lautet:."
+            "Um zu zeigen, dass du alle notwendigen Fähigkeiten besitzt, musst du zeigen,",
+            "dass du in der Lage bist, Informationen aus Log Files herauszulesen.",
+            "Schreibe eine Methode <code>run(Directory)</code>, die alle Lines ausgibt vom "07/Mar", zwischen 16:00-16:59 und die eine "POST"-Request-Methode enthalten."]
+        hints = ["MUSS ICH MIR NOCH AUSDENKEN.",
+            "MUSS ICH MIR NOCH AUSDENKEN.",
+            "MUSS ICH MIR NOCH AUSDENKEN."]
+
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.Log_File_Search, "data": Directory}
 
     ### SOLUTIONS ###
     # Level 1
-    def Header_Request(self, URL):
-        from requests import get
-        r = get(f'{URL}')
-        return r.headers['server']
+    def Passwort(self):
+        
+        def PW_Generator(PW_Len):
+            word = ""
+            for _ in range(0, int(PW_Len)+1):
+                word += chr(randint(33,126))
+            return word
+        
+        Pass = PW_Generator(8)
+        print(f" Dein neues Passwort lautet: {Pass}")
+        
+        #Von hier ab Validierung des Passworts
+        def PW_Check(Pass, laenge):
+            l, u, p, d = 0, 0, 0, 0
+            symbols = string.punctuation
+            if (len(Pass) >= laenge):
+                for i in Pass:
 
-    # Level 4
+                # Zaehlen Kleinbuchstaben
+                    if (i.islower()):
+                        l+=1
+
+                # Zaehlen Grossbuchstaben
+                    if (i.isupper()):
+                        u+=1
+
+                # Zaehlen Zahlen
+                    if (i.isdigit()):
+                        d+=1
+
+                # Zaehlen Sonderzeichen
+                    if(i in symbols):
+                        p+=1
+                if (l>=1 and u>=1 and p>=1 and d>=1 and l+p+u+d==len(Pass)):
+                    print("Valides Passwort")
+            else:
+                print("Invalides Passwort")
+           
+        return PW_Check
+ 
 
     # Level 5
     def Log_File_Search(Path):
