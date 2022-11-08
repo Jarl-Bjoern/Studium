@@ -28,7 +28,7 @@ class Room_Schwab(EscapeRoom):
 
     
     def create_level5(self):
-        Work_Path, Script_Path = "rooms/Level_5", dirname(realpath(__file__))
+        Work_Path, Script_Path = "Level_5/access.log", dirname(realpath(__file__))
         Directory = join(Script_Path, Work_Path)
 
         task_messages = ["Nur noch ein Rätsel trennt dich von der Aufnahme in die Hackergruppe. Es lautet:."
