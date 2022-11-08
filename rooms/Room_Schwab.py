@@ -12,7 +12,8 @@ class Room_Schwab(EscapeRoom):
 
     ### LEVELS ###
     def create_level4(self):
-
+        PW_Len = 8
+        
         task_messages = ["Der erste Raum wurde erfolgreich durchlaufen, aber die Challenge ist noch nicht vorbei. Folgendes erscheint auf dem Display:",
                         "Nicht schlecht! Aber das geht noch besser!",
                         "Um sicherzustellen, dass dein Aufnahmetest nicht hier endet, generiere ein Passwort mit 8 Zeichen, das Kleinbuchstaben, Großbuchstaben, Zahlen und Sonderzeichen enthält.",
@@ -22,7 +23,7 @@ class Room_Schwab(EscapeRoom):
                  "Du musst nicht unbedingt alle benötigten Zeichen einzeln aufschreiben.",
                  "Informiere dich was random bewirkt."]
 
-        return {"task_messages": task_messages, "hints": hints, "solution_function": self.Passwort}
+        return {"task_messages": task_messages, "hints": hints, "solution_function": self.Passwort, "data": PW_Len}
 
     
     def create_level5(self):
