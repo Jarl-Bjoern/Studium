@@ -23,7 +23,7 @@ class Room_Schwab(EscapeRoom):
                  "Informiere dich was random bewirkt."]
 
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Passwort}
-    
+
     
     def create_level5(self):
         Work_Path, Script_Path = "rooms/Level_5", dirname(realpath(__file__))
