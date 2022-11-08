@@ -1,7 +1,7 @@
 from EscapeRoom import EscapeRoom
 from os.path import dirname, join, realpath
-from re import split as rsplit
 from random import randint
+from re import split as rsplit
 from string import punctuation
 
 class Room_Schwab(EscapeRoom):
