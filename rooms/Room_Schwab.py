@@ -1,6 +1,6 @@
 from EscapeRoom import EscapeRoom
-from os import listdir
 from os.path import dirname, join, realpath
+from re import split as rsplit
 from random import randint
 from string import punctuation
 
