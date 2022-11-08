@@ -2,7 +2,7 @@ from EscapeRoom import EscapeRoom
 from os import listdir
 from os.path import dirname, join, realpath
 from random import randint
-import string
+from string import punctuation
 
 class Room_Schwab(EscapeRoom):
     def __init__(self):
@@ -55,7 +55,7 @@ class Room_Schwab(EscapeRoom):
         #Von hier ab Validierung des Passworts
         def PW_Check(Pass):
             l, u, p, d = 0, 0, 0, 0
-            symbols = string.punctuation
+            symbols = punctuation
             for _ in Pass:
                 # Zaehlen Kleinbuchstaben
                 if (_.islower()):
