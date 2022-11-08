@@ -30,12 +30,14 @@ class Room_Schwab(EscapeRoom):
         Directory = join(Script_Path, Work_Path)
 
         task_messages = ["Nur noch ein Rätsel trennt dich von der Aufnahme in die Hackergruppe. Es lautet:."
-            "Um zu zeigen, dass du alle notwendigen Fähigkeiten besitzt, musst du zeigen,",
-            "dass du in der Lage bist, Informationen aus Log Files herauszulesen.",
-            "Schreibe eine Methode <code>run(Directory)</code>, die alle Lines ausgibt vom "07/Mar", zwischen 16:00-16:59 und die eine "POST"-Request-Methode enthalten."]
-        hints = ["MUSS ICH MIR NOCH AUSDENKEN.",
-            "MUSS ICH MIR NOCH AUSDENKEN.",
-            "MUSS ICH MIR NOCH AUSDENKEN."]
+                        "Um zu zeigen, dass du alle notwendigen Fähigkeiten besitzt, musst du zeigen,",
+                        "dass du in der Lage bist, Informationen aus Log Files herauszulesen.",
+                        "Schreibe eine Methode <code>run(Directory)</code>, die alle Lines ausgibt vom "07/Mar" und die eine "POST"-Request-Methode enthalten.",
+                        "Sollten sich in der Liste leere Felder befinden, gebe diese nicht aus."]
+        
+        hints = ["Recherchiere wie du Strings auftrennen und zusammenfügen kannst.",
+                "Vielleicht macht es Sinn den String nicht nur nach Leerzeichen zu trennen.",
+                "Stelle sicher, dass beim Aufsplitten jedes List Item in einer neuen Zeile dargestellt wird."]
 
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Log_File_Search, "data": Directory}
 
