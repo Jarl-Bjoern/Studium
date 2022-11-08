@@ -56,21 +56,21 @@ class Room_Schwab(EscapeRoom):
         def PW_Check(Pass):
             l, u, p, d = 0, 0, 0, 0
             symbols = string.punctuation
-            for i in Pass:
+            for _ in Pass:
                 # Zaehlen Kleinbuchstaben
-                if (i.islower()):
+                if (_.islower()):
                     l+=1
 
                 # Zaehlen Grossbuchstaben
-                elif (i.isupper()):
+                elif (_.isupper()):
                     u+=1
 
                 # Zaehlen Zahlen
-                elif (i.isdigit()):
+                elif (_.isdigit()):
                     d+=1
 
                 # Zaehlen Sonderzeichen
-                elif(i in symbols):
+                elif(_ in symbols):
                     p+=1
 
             if (l > 1 and u > 1 and p > 1 and d > 1):
@@ -79,9 +79,8 @@ class Room_Schwab(EscapeRoom):
         Hilf = ""
         while True:
             Pass = PW_Generator(8)
-            Vorgang = PW_Check(Pass)
 
-            if (Vorgang == True):
+            if (PW_Check(Pass) == True):
                 Hilf = "Valides Passwort"
                 break
 
