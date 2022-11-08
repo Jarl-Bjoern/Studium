@@ -87,7 +87,7 @@ class Room_Schwab(EscapeRoom):
         return Hilf 
 
     # Level 5
-    def Log_File_Search(Path):
+    def Log_File_Search(self, Path):
         with open(Path, 'r') as f:
                 for line in f.read().splitlines():
                     Datum = rsplit(r':|\s', line)
