@@ -44,7 +44,7 @@ class Room_Schwab(EscapeRoom):
         return {"task_messages": task_messages, "hints": hints, "solution_function": self.Log_File_Search, "data": Directory}
 
     ### SOLUTIONS ###
-    # Level 1
+    # Level 4
     def Passwort(self, PW_Len):
         def PW_Generator(PW_Len):
             word = ""
