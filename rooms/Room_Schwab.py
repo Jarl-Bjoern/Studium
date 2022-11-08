@@ -44,45 +44,46 @@ class Room_Schwab(EscapeRoom):
     ### SOLUTIONS ###
     # Level 1
     def Passwort(self):
-        
         def PW_Generator(PW_Len):
             word = ""
             for _ in range(0, int(PW_Len)+1):
                 word += chr(randint(33,126))
             return word
-        
-        Pass = PW_Generator(8)
-        print(f" Dein neues Passwort lautet: {Pass}")
-        
+
         #Von hier ab Validierung des Passworts
-        def PW_Check(Pass, laenge):
+        def PW_Check(Pass):
             l, u, p, d = 0, 0, 0, 0
             symbols = string.punctuation
-            if (len(Pass) >= laenge):
-                for i in Pass:
-
+            for i in Pass:
                 # Zaehlen Kleinbuchstaben
-                    if (i.islower()):
-                        l+=1
+                if (i.islower()):
+                    l+=1
 
                 # Zaehlen Grossbuchstaben
-                    if (i.isupper()):
-                        u+=1
+                elif (i.isupper()):
+                    u+=1
 
                 # Zaehlen Zahlen
-                    if (i.isdigit()):
-                        d+=1
+                elif (i.isdigit()):
+                    d+=1
 
                 # Zaehlen Sonderzeichen
-                    if(i in symbols):
-                        p+=1
-                if (l>=1 and u>=1 and p>=1 and d>=1 and l+p+u+d==len(Pass)):
-                    print("Valides Passwort")
-            else:
-                print("Invalides Passwort")
-           
-        return PW_Check
- 
+                elif(i in symbols):
+                    p+=1
+
+            if (l > 1 and u > 1 and p > 1 and d > 1):
+                return True
+
+        Hilf = ""
+        while True:
+            Pass = PW_Generator(8)
+            Vorgang = PW_Check(Pass)
+
+            if (Vorgang == True):
+                Hilf = "Valides Passwort"
+                break
+
+        return Hilf 
 
     # Level 5
     def Log_File_Search(Path):
