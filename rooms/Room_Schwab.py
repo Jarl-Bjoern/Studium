@@ -45,7 +45,7 @@ class Room_Schwab(EscapeRoom):
 
     ### SOLUTIONS ###
     # Level 1
-    def Passwort(self):
+    def Passwort(self, PW_Len):
         def PW_Generator(PW_Len):
             word = ""
             for _ in range(0, int(PW_Len)+1):
@@ -78,7 +78,7 @@ class Room_Schwab(EscapeRoom):
 
         Hilf = ""
         while True:
-            Pass = PW_Generator(8)
+            Pass = PW_Generator(PW_Len)
 
             if (PW_Check(Pass) == True):
                 Hilf = "Valides Passwort"
