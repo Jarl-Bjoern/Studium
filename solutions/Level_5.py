@@ -1,4 +1,6 @@
 def run(Path):
+    from re import split as rsplit
+    
     Temp_Array = []
     with open(Path, 'r') as f:
             for line in f.read().splitlines():
