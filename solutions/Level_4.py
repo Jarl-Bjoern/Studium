@@ -1,4 +1,7 @@
 def run(PW_Len):
+    from random import randint
+    from string import punctuation
+    
     def PW_Generator(PW_Len):
         word = ""
         for _ in range(0, int(PW_Len)+1):
