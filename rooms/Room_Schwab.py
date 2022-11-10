@@ -18,7 +18,7 @@ class Room_Schwab(EscapeRoom):
         task_messages = ["Der erste Raum wurde erfolgreich durchlaufen, aber die Challenge ist noch nicht vorbei. Folgendes erscheint auf dem Display:",
                         "Nicht schlecht! Aber das geht noch besser!",
                         "Um sicherzustellen, dass dein Aufnahmetest nicht hier endet, generiere ein Passwort mit 8 Zeichen, das Kleinbuchstaben, Großbuchstaben, Zahlen und Sonderzeichen enthält.",
-                        "Validiere dein Ergebnis!"]
+                        'Validiere dein Ergebnis, in diesem Fall sollte die Funktion "Valides Passwort" ausgeben !']
                         
         hints = ["Versuche die PW-Generierung und PW-Validierung in 2 Methoden aufzuteilen.",
                  "Du musst nicht unbedingt alle benötigten Zeichen einzeln aufschreiben.",
