@@ -1,4 +1,4 @@
-def Header_Request(self, URL):
+def run(URL):
     from requests import get
     
     r = get(f'{URL}')
